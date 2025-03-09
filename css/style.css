@@ -1,0 +1,248 @@
+/* General Styles */
+body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+}
+
+/* Full-screen canvas for animation */
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    display: block;
+            
+}
+
+/* Coming Soon Section */
+.coming-soon {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: rgba(245, 242, 242, 0.16) 0px 1px 4px;
+    animation: fadeIn 1.5s ease-in-out;
+    z-index: 1;
+    position: relative;
+    width: 80%;
+    max-width: 400px;
+}
+
+
+/* Image Styling */
+.coming-soon img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    margin-bottom: 15px;
+    animation: bounceIn 1.5s ease-in-out;
+}
+
+/* Name Styling */
+h1 {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    opacity: 0;
+    animation: fadeInText 2s ease-in-out forwards;
+}
+
+/* "Coming Soon" Styling */
+h3 {
+    font-size: 24px;
+    color: #ffcc00;
+    margin-bottom: 10px;
+    animation: glow 1.5s infinite alternate ease-in-out;
+}
+
+/* Description Text */
+p {
+    font-size: 16px;
+    opacity: 0.8;
+    animation: fadeInText 2.5s ease-in-out forwards;
+}
+
+/* Loader Styling */
+.loader {
+    position: relative;
+    margin: 20px auto;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 5px solid transparent;
+    border-top: 5px solid #ffcc00;
+    animation: rotateLoader 2s linear infinite;
+}
+
+/* Loader Container */
+.loader {
+    position: relative;
+    margin: 20px auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+/* Creating the Geometric Pulse Effect */
+.loader:before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: transparent;
+    border: 5px solid #ffffff;
+    animation: pulse 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
+}
+
+/* Geometric Pulse Animation */
+@keyframes pulse {
+    0% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.3);
+        opacity: 0.4;
+    }
+    100% {
+        transform: scale(0.8);
+        opacity: 1;
+    }
+}
+
+/* Moving Dot Animation */
+@keyframes dotMove {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(20px) scale(1.2);
+        opacity: 0.8;
+    }
+    50% {
+        transform: scale(1.4);
+        opacity: 0.6;
+    }
+    75% {
+        transform: translateX(-20px) scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInText {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounceIn {
+    0% { opacity: 0; transform: scale(0.5); }
+    60% { opacity: 1; transform: scale(1.1); }
+    100% { transform: scale(1); }
+}
+
+
+/* Social Media Links */
+.social-links {
+    margin-top: 20px;
+    color: white;
+}
+
+.social-icon {
+    display: inline-block;
+    font-size: 24px;
+    color: #ffffff;
+    margin: 0 10px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    color: #ffcc00;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .coming-soon {
+        width: 90%;
+        padding: 30px;
+    }
+
+    .coming-soon img {
+        width: 100px;
+        height: 100px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
+    .loader {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .coming-soon {
+        width: 60%;
+        padding: 20px;
+    }
+
+    .coming-soon img {
+        width: 80px;
+        height: 80px;
+    }
+
+    h1 {
+        font-size: 20px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 12px;
+    }
+
+    .loader {
+        width: 40px;
+        height: 40px;
+    }
+}
