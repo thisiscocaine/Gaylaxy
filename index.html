@@ -91,6 +91,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <img src="https://cdn.aryanaryal.com.np/626c6f672d617279616e/70686f746f73/6c6f676f73/favicon.png" alt="Aaryan Aryal Logo">
         <h1>AARYAN</h1>
         <h4>Application Security Researcher</h4>
+	
+	<div class="loader">
+            <!-- Power Button Inside Loader -->
+            <button id="power-button" class="power-button">
+                <i class="fa-solid fa-power-off"></i>
+            </button>
+        </div>
         
         <div class="loader"></div>
 
@@ -102,9 +109,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <a href="https://aryanaryal.com.np" target="_blank" class="social-icon" aria-label="Website"><i class="fa-solid fa-globe"></i></a>
         </div>
     </div>
+	
+	<!-- JavaScript for Power Button Toggle -->
+    <script>
+        const powerButton = document.getElementById("power-button");
+        const loader = document.querySelector(".loader");
+
+        powerButton.addEventListener("click", () => {
+            loader.classList.toggle("off");
+            
+        });
+    </script>
 
     <!-- JavaScript for Canvas Animation -->
     <script src="js/animation.js"></script>
     <script src="https://cdn.aryanaryal.com.np/626c6f672d617279616e/6d61696e/6a73/16234.js"></script>
+
 </body>
 </html>
