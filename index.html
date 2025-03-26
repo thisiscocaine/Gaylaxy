@@ -75,8 +75,16 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- End Google Tag Manager -->
 
 
- <style>
-        /* Power Button Inside Loader */
+ 
+    <style>
+        /* Centering the Power Button */
+        
+
+        .loader {
+            position: relative;
+        }
+
+        /* Power Button */
         .power-button {
             position: absolute;
             top: 50%;
@@ -84,13 +92,19 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             transform: translate(-50%, -50%);
             background: transparent;
             border: none;
-            color: white;
-            font-size: 50px;
+            color: blue;
+            font-size: 40px;  /* Icon size */
             cursor: pointer;
             outline: none;
             transition: all 0.3s ease;
             border-radius: 50%;
-            box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5); /* Blue shadow */
+            
+            width: 60px;   /* Button size */
+            height: 60px;  /* Button size */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5);  /* Blue shadow */
         }
 
         /* Hover Effect */
@@ -103,10 +117,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             animation: none;
             background-color: #333;
         }
-
-       
-
-       
     </style>
 
 </head>
