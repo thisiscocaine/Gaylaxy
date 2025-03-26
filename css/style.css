@@ -111,6 +111,40 @@ p {
     animation: pulse 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
 }
 
+  /* Power Button Inside Loader */
+        .power-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: transparent;
+            border: none;
+            color: white;
+            font-size: 50px;
+            cursor: pointer;
+            outline: none;
+            transition: all 0.3s ease;
+            border-radius: 50%;
+            box-shadow: 0 0 10px 5px rgba(0, 0, 255, 0.5); /* Blue shadow */
+        }
+
+        /* Hover Effect */
+        .power-button:hover {
+            color: red; /* Red color on hover */
+            box-shadow: 0 0 15px 5px rgba(255, 0, 0, 0.7); /* Red shadow on hover */
+        }
+
+        .loader.off {
+            animation: none;
+            background-color: #333;
+        }
+
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+
 /* Geometric Pulse Animation */
 @keyframes pulse {
     0% {
