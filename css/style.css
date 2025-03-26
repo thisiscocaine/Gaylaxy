@@ -73,43 +73,7 @@ p {
     animation: fadeInText 2.5s ease-in-out forwards;
 }
 
-/* Loader Styling */
-.loader {
-    position: relative;
-    margin: 20px auto;
-    width: 60px;
-    height: 60px;
-    border-radius: 50%;
-    border: 5px solid transparent;
-    border-top: 5px solid #ffcc00;
-    animation: rotateLoader 2s linear infinite;
-}
 
-/* Loader Container */
-.loader {
-    position: relative;
-    margin: 20px auto;
-    width: 70px;
-    height: 70px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
-}
-
-/* Creating the Geometric Pulse Effect */
-.loader:before {
-    content: "";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    background: transparent;
-    border: 5px solid #ffffff;
-    animation: pulse 2s infinite cubic-bezier(0.68, -0.55, 0.27, 1.55);
-}
 
   /* Power Button Inside Loader */
         .power-button {
